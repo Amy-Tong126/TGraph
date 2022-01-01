@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>测试demo</title>
+</head>
+
+<body>
+    <script src="../dist/TGraph.js"></script>
+    <h3>TGraph</h3>
+    <div id="t-graph" style="border: 1px solid #eee;"></div>
+    <script>
+        const graph = new TGraph();
+        graph.init({
+            height: 500,
+            width: document.body.offsetWidth,
+            wrapper: "#t-graph",
+            nodes: [
+                { id: 1, symbolSize: 2, label: "1", style: { fill: "#f00" } },
+                { id: 2, symbolSize: 2, label: "2", style: { fill: "#f00" } }
+            ],
+            links: [{ source: 1, target: 2 }]
+        });
+
+        setTimeout(() => {
+            graph.update({
+                nodes: [
+                    { id: 1, symbolSize: 2, label: "1", style: { fill: "#f00" } },
+                    { id: 2, symbolSize: 2, label: "2", style: { fill: "#f00" } },
+                    { id: 3, symbolSize: 2, label: "3", style: { fill: "#f00" } }
+                ],
+                links: [{ source: 1, target: 2 }, { source: 2, target: 3 }]
+            })
+        }, 2000);
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,31 @@
+{
+  "name": "tgraph",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "rollup --config rollup.config.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Amy-Tong126/TGraph.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Amy-Tong126/TGraph/issues"
+  },
+  "homepage": "https://github.com/Amy-Tong126/TGraph#readme",
+  "dependencies": {
+    "d3": "^7.2.1",
+    "lodash": "^4.17.21"
+  },
+  "devDependencies": {
+    "@rollup/plugin-commonjs": "^21.0.1",
+    "@rollup/plugin-node-resolve": "^13.1.1",
+    "@types/d3": "^7.1.0",
+    "@types/lodash": "^4.14.178",
+    "rollup-plugin-serve": "^1.1.0"
+  }
+}
